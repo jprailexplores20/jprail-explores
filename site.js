@@ -7,7 +7,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('story-count').textContent = String(trips.length).padStart(2, '0');
 
-  const socialLabels = { instagram: 'Instagram', facebook: 'Facebook', youtube: 'YouTube' };
+  const socialLabels = { instagram: 'Instagram · @jprailexplores', facebook: 'Facebook · JourneyWithJR', youtube: 'YouTube · @jprailexplores' };
   const socialNav = document.getElementById('social-links');
   socialNav.innerHTML = Object.entries(window.JP_SOCIALS || {}).map(([name, url]) => {
     if (!socialLabels[name] || !url) return '';

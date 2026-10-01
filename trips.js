@@ -10,7 +10,7 @@
 */
 window.JP_SOCIALS = {
   instagram: "https://www.instagram.com/jprailexplores/",
-  facebook: "https://www.facebook.com/journeywithjr",
+  facebook: "https://www.facebook.com/Jprailexplores/",
   youtube: "https://www.youtube.com/@jprailexplores"
 };
 
