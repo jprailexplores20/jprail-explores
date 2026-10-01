@@ -8,12 +8,18 @@
   personal photo files were not included in this coding workspace. Replace their
   image URLs with your own files when uploading them.
 */
+window.JP_SOCIALS = {
+  instagram: "https://www.instagram.com/jprailexplores/",
+  facebook: "https://www.facebook.com/journeywithjr",
+  youtube: "https://www.youtube.com/@jprailexplores"
+};
+
 window.JP_TRIPS = [
   {
     title: "Where the buffalo roam",
     place: "Yellowstone · Wyoming",
     date: "Summer 2026",
-    image: "https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1400&q=85",
+    image: "https://images.unsplash.com/photo-1745276239207-91a1fd271779?auto=format&fit=crop&w=1800&q=85",
     alt: "Bison in a wide open western landscape",
     note: "A quiet morning among the wild residents of Yellowstone."
   },

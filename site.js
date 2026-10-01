@@ -7,6 +7,16 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('story-count').textContent = String(trips.length).padStart(2, '0');
 
+  const socialLabels = { instagram: 'Instagram', facebook: 'Facebook', youtube: 'YouTube' };
+  const socialNav = document.getElementById('social-links');
+  socialNav.innerHTML = Object.entries(window.JP_SOCIALS || {}).map(([name, url]) => {
+    if (!socialLabels[name] || !url) return '';
+    try {
+      if (new URL(url).protocol !== 'https:') return '';
+    } catch (_) { return ''; }
+    return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${socialLabels[name]}</a>`;
+  }).join('');
+
   if (first) {
     hero.style.backgroundImage = `url("${first.image}")`;
     document.getElementById('hero-caption').textContent = first.place.toUpperCase();
