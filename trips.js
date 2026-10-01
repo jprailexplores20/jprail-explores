@@ -1,42 +1,17 @@
-/*
-  SITE CONTENT — quick photo updates
-  1. Upload each new photo into the /photos folder in GitHub.
-  2. Add a trip/photo entry below; set image to its path, e.g. "photos/yellowstone-bison.jpg".
-  3. Put the newest entry first. Save the change and Cloudflare Pages publishes it.
-
-  The Unsplash photos below are temporary visual stand-ins because the selected
-  personal photo files were not included in this coding workspace. Replace their
-  image URLs with your own files when uploading them.
-*/
+/* Site content: add new photos at the top of this gallery. */
 window.JP_SOCIALS = {
   instagram: "https://www.instagram.com/jprailexplores/",
-  facebook: "https://www.facebook.com/Jprailexplores/",
+  facebook: "https://www.facebook.com/journeywithjr/",
   youtube: "https://www.youtube.com/@jprailexplores"
 };
 
 window.JP_TRIPS = [
-  {
-    title: "Where the buffalo roam",
-    place: "Yellowstone · Wyoming",
-    date: "Summer 2026",
-    image: "https://images.unsplash.com/photo-1745276239207-91a1fd271779?auto=format&fit=crop&w=1800&q=85",
-    alt: "Bison in a wide open western landscape",
-    note: "A quiet morning among the wild residents of Yellowstone."
-  },
-  {
-    title: "Red rock, open road",
-    place: "Arches · Utah",
-    date: "Summer 2026",
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85",
-    alt: "Warm desert landscape beneath a wide sky",
-    note: "Stone shaped by time, light, and the long way around."
-  },
-  {
-    title: "At the edge of the map",
-    place: "Alaska",
-    date: "Summer 2026",
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85",
-    alt: "A mountain lake reflecting the surrounding peaks",
-    note: "Big country, still water, and nowhere else to be."
-  }
+  { title: "A wild morning in Yellowstone", place: "Yellowstone · Wyoming", date: "Wildlife", image: "photos/yellowstone-bison.jpg", alt: "A bison standing among the pines in Yellowstone", note: "A close encounter with the quiet power of the American West." },
+  { title: "Steam over the Grand Prismatic", place: "Yellowstone · Wyoming", date: "Geyser country", image: "photos/yellowstone-grand-prismatic.jpg", alt: "Steam rises over the turquoise and orange Grand Prismatic Spring", note: "Color, steam, and open sky meet in the heart of the park." },
+  { title: "The long way to Delicate Arch", place: "Arches · Utah", date: "Red rock country", image: "photos/utah-delicate-arch.jpg", alt: "Delicate Arch framed by Utah's red-rock desert and evening sky", note: "A sandstone landmark shaped by time and desert light." },
+  { title: "A moment above the canyon", place: "Canyonlands · Utah", date: "High desert", image: "photos/utah-canyon-overlook.jpg", alt: "A traveler looks across the immense red-rock canyonlands", note: "Layer upon layer of canyon, distance, and western sky." },
+  { title: "Standing beneath Alaska's peaks", place: "Alaska", date: "Mountain country", image: "photos/alaska-mountain-view.jpg", alt: "A traveler stands before a vast snow-covered Alaska mountain range", note: "A small human moment in a landscape on a monumental scale." },
+  { title: "The quiet side of Denali", place: "Alaska", date: "Open country", image: "photos/alaska-denali-range.jpg", alt: "A broad, snow-covered Alaska mountain range beneath a blue sky", note: "A long view across the stillness of the northern range." },
+  { title: "Where the river meets the ice", place: "Alaska", date: "Spring thaw", image: "photos/alaska-frozen-river.jpg", alt: "A braided river and spring ice below snow-covered Alaska peaks", note: "A fleeting season between winter's hold and the return of water." },
+  { title: "Light across the Alaska Range", place: "Alaska", date: "Mountain light", image: "photos/alaska-denali-light.jpg", alt: "Late light falls across distant snow-covered Alaska peaks", note: "Changing light gives the same wild country a new character." }
 ];
