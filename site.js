@@ -2,10 +2,8 @@
   const trips = Array.isArray(window.JP_TRIPS) ? window.JP_TRIPS : [];
   const grid = document.getElementById('story-grid');
   const hero = document.getElementById('hero-image');
-  const first = trips[0];
 
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('story-count').textContent = String(trips.length).padStart(2, '0');
 
   const socialLabels = { instagram: 'Instagram · @jprailexplores', facebook: 'Facebook · JourneyWithJR', youtube: 'YouTube · @jprailexplores' };
   const socialNav = document.getElementById('social-links');
@@ -17,9 +15,28 @@
     return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${socialLabels[name]}</a>`;
   }).join('');
 
-  if (first) {
-    hero.style.backgroundImage = `url("${first.image}")`;
-    document.getElementById('hero-caption').textContent = first.place.toUpperCase();
+  const featured = [
+    { place: 'ALASKA · THE WIDE NORTH', image: 'photos/alaska-denali-range.jpg', href: 'alaska.html', label: 'Explore the Alaska travel guide' },
+    { place: 'YELLOWSTONE · WYOMING', image: 'photos/yellowstone-grand-prismatic.jpg', href: '#guide-yellowstone', label: 'Explore Yellowstone stories and guide' },
+    { place: 'UTAH · RED-ROCK COUNTRY', image: 'photos/utah-delicate-arch.jpg', href: '#guide-utah', label: 'Explore Utah stories and guide' }
+  ];
+  const destinationLink = document.getElementById('hero-destination');
+  const heroIndex = document.getElementById('hero-index');
+  let activeSlide = 0;
+  function showSlide(index) {
+    activeSlide = (index + featured.length) % featured.length;
+    const slide = featured[activeSlide];
+    hero.style.backgroundImage = `url("${slide.image}")`;
+    document.getElementById('hero-caption').textContent = slide.place;
+    destinationLink.href = slide.href;
+    destinationLink.setAttribute('aria-label', slide.label);
+    heroIndex.textContent = String(activeSlide + 1).padStart(2, '0');
+  }
+  document.getElementById('hero-prev').addEventListener('click', () => showSlide(activeSlide - 1));
+  document.getElementById('hero-next').addEventListener('click', () => showSlide(activeSlide + 1));
+  showSlide(0);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.setInterval(() => showSlide(activeSlide + 1), 7000);
   }
 
   grid.innerHTML = trips.map((trip) => `
