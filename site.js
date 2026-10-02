@@ -16,12 +16,14 @@
   }).join('');
 
   const featured = [
+    { place: 'COLORADO · HIGH COUNTRY', image: 'photos/colorado-maroon-bells.jpg', href: 'colorado.html', label: 'Explore the Colorado travel guide' },
     { place: 'ALASKA · THE WIDE NORTH', image: 'photos/alaska-denali-range.jpg', href: 'alaska.html', label: 'Explore the Alaska travel guide' },
     { place: 'YELLOWSTONE · WYOMING', image: 'photos/yellowstone-grand-prismatic.jpg', href: '#guide-yellowstone', label: 'Explore Yellowstone stories and guide' },
     { place: 'UTAH · RED-ROCK COUNTRY', image: 'photos/utah-delicate-arch.jpg', href: '#guide-utah', label: 'Explore Utah stories and guide' }
   ];
   const destinationLink = document.getElementById('hero-destination');
   const heroIndex = document.getElementById('hero-index');
+  document.getElementById('hero-total').textContent = String(featured.length).padStart(2, '0');
   let activeSlide = 0;
   function showSlide(index) {
     activeSlide = (index + featured.length) % featured.length;
